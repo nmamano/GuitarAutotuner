@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#343434"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/mainMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <org.sidor.androidapps.simpletuner.PitchView
+            android:id="@+id/pitch_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="3" >
+        </org.sidor.androidapps.simpletuner.PitchView>
+
+        <Spinner
+            android:id="@+id/tuningSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/freqAnalyzed"
+            android:layout_centerHorizontal="true"
+            android:text=" "/>
+
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/sample_content_fragment"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0px" />
+</LinearLayout>
